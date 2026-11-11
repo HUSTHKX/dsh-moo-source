@@ -22,7 +22,8 @@
       "bug_report_url": "https://github.com/FNOSP/fnos-dsh/issues",
       "maintainer": "tnnevol",
       "distributor": "FNOSP",
-      "updated_at": "2026-11-06"
+      "updated_at": "2026-11-06",
+      "changelog": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- **opencode**: 点登录即自动打开授权页并复制授权地址 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(1858c)</samp>](https://github.com/FNOSP/fnos-dsh/commit/1858c92)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- **opencode**:\n  - 套餐未知时按 Go 口径过滤模型 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(22309)</samp>](https://github.com/FNOSP/fnos-dsh/commit/223097f)\n  - 上游新上架的免费模型按不限量置顶 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(a77b3)</samp>](https://github.com/FNOSP/fnos-dsh/commit/a77b3a2)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/FNOSP/fnos-dsh/compare/v8.1.1...v8.1.3)"
     }
   }
 }
