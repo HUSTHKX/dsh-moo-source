@@ -1,0 +1,28 @@
+{
+  "schema_version": "moo",
+  "source_info": {
+    "name": "DeepSeek Harness (FNOSP) 更新源",
+    "author": "fn-deepseek-harness",
+    "homepage": "https://github.com/FNOSP/fnos-dsh",
+    "description": "DeepSeek Harness 的 fnOS 原生包索引，数据来源为 FNOSP/fnos-dsh 的 GitHub Releases（x86_64）。"
+  },
+  "apps": {
+    "fn-deepseek-harness": {
+      "display_name": "DeepSeek Harness",
+      "version": "8.1.3",
+      "download_url": "https://github.com/FNOSP/fnos-dsh/releases/download/v8.1.3/fn-deepseek-harness-x86-v8.1.3-dsh-0.2.2-rc.1.fpk",
+      "platform": "x86",
+      "sha256": "33f34b5fcae62fd0ecade4274fedc186b7420f6e21819c7850a2d2215bd6f91d",
+      "size_bytes": 334435,
+      "categories": [
+        "AI"
+      ],
+      "desc": "DeepSeek Harness 的 fnOS 原生应用包，8.1.3 内置 DSH 0.2.2-rc.1。",
+      "homepage": "https://github.com/FNOSP/fnos-dsh",
+      "bug_report_url": "https://github.com/FNOSP/fnos-dsh/issues",
+      "maintainer": "tnnevol",
+      "distributor": "FNOSP",
+      "updated_at": "2026-11-06"
+    }
+  }
+}

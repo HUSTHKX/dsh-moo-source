@@ -1,0 +1,74 @@
+name: update-moo-json
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate moo.json from FNOSP latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import re
+          import urllib.request
+
+          API = "https://api.github.com/repos/FNOSP/fnos-dsh/releases/latest"
+          req = urllib.request.Request(
+              API,
+              headers={
+                  "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                  "Accept": "application/vnd.github+json",
+              },
+          )
+          rel = json.load(urllib.request.urlopen(req))
+
+          tag = rel["tag_name"].lstrip("v")
+          asset = next(
+              (a for a in rel["assets"] if re.fullmatch(r"fn-deepseek-harness-x86-v.+\.fpk", a["name"])),
+              None,
+          )
+          if asset is None:
+              raise SystemExit("no x86 fpk asset in latest release")
+
+          data = urllib.request.urlopen(asset["browser_download_url"]).read()
+
+          doc = json.load(open("moo.json", encoding="utf-8"))
+          app = doc["apps"]["fn-deepseek-harness"]
+          app["version"] = tag
+          app["download_url"] = asset["browser_download_url"]
+          app["sha256"] = hashlib.sha256(data).hexdigest()
+          app["size_bytes"] = len(data)
+          app["updated_at"] = rel["published_at"][:10]
+          app["changelog"] = (rel.get("body") or "")[:3000]
+
+          with open("moo.json", "w", encoding="utf-8") as f:
+              json.dump(doc, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+
+          print("updated to", tag, app["sha256"][:12], len(data), "bytes")
+          PY
+
+      - name: Commit when changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- moo.json; then
+            echo "moo.json unchanged"
+            exit 0
+          fi
+          git add moo.json
+          git commit -m "chore: sync moo.json with latest FNOSP release"
+          git push
