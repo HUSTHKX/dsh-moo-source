@@ -9,11 +9,11 @@
   "apps": {
     "fn-deepseek-harness": {
       "display_name": "DeepSeek Harness",
-      "version": "8.1.155",
-      "download_url": "https://github.com/FNOSP/fnos-dsh/releases/download/v8.1.155/fn-deepseek-harness-x86-v8.1.155-dsh-0.2.2-rc.1.fpk",
+      "version": "8.3.0",
+      "download_url": "https://github.com/FNOSP/fnos-dsh/releases/download/v8.3.0/fn-deepseek-harness-x86-v8.3.0-dsh-0.2.2-rc.5.fpk",
       "platform": "x86",
-      "sha256": "910d522f410b64547955b3ae9d80dee5b90f0af1e00bef781ae7fdf7e755788c",
-      "size_bytes": 345710,
+      "sha256": "a80ed10cd53f97755fc1a800e550aeefa563075072750553c83e2c4b1fb90005",
+      "size_bytes": 338007,
       "categories": [
         "AI"
       ],
@@ -22,8 +22,8 @@
       "bug_report_url": "https://github.com/FNOSP/fnos-dsh/issues",
       "maintainer": "tnnevol",
       "distributor": "FNOSP",
-      "updated_at": "2026-11-18",
-      "changelog": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- **dsh**:\n  - 把 Codex Auth 与 Failover Search 移出 FPK 内置清单 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(9e4af)</samp>](https://github.com/FNOSP/fnos-dsh/commit/9e4af7f0)\n- **fnos**:\n  - 插件详情页增加依赖修复，解决应用内装不上插件 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(416f7)</samp>](https://github.com/FNOSP/fnos-dsh/commit/416f749a)\n  - 依赖修复改为单一按钮，标题与图标居中对齐 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(21d27)</samp>](https://github.com/FNOSP/fnos-dsh/commit/21d2755d)\n  - 依赖修复补诊断与执行日志 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(467d1)</samp>](https://github.com/FNOSP/fnos-dsh/commit/467d14c0)\n  - 刷新与重启按钮移入侧栏「更多」菜单 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(d65a6)</samp>](https://github.com/FNOSP/fnos-dsh/commit/d65a6d17)\n  - 刷新与重启移入会话头部「…」菜单 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(a8e53)</samp>](https://github.com/FNOSP/fnos-dsh/commit/a8e5376a)\n  - 重启用独立电源图标，引入按需内联的 Iconify &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(64f56)</samp>](https://github.com/FNOSP/fnos-dsh/commit/64f56c8f)\n  - 补回「复制会话为 Markdown」 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(35e62)</samp>](https://github.com/FNOSP/fnos-dsh/commit/35e62514)\n  - 配置收进「更多」菜单的「飞牛 OS」弹框 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(b4688)</samp>](https://github.com/FNOSP/fnos-dsh/commit/b46884b7)\n  - 新增「运行」分组，用 ECharts 展示进程指标 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(791df)</samp>](https://github.com/FNOSP/fnos-dsh/commit/791df0a1)\n  - 运行页改四宫格并加网速；右列顶部与左侧菜单齐平 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(f8923)</samp>](https://github.com/FNOSP/fnos-dsh/commit/f8923bd7)\n  - 运行页增加本应用进程树，可结束/强制结束 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(1b0c2)</samp>](https://github.com/FNOSP/fnos-dsh/commit/1b0c2ea2)\n  - 运行页补字段图标与网络上下行，新增日志分组 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(e6924)</samp>](https://github.com/FNOSP/fnos-dsh/commit/e69248b9)\n  - 进程改按应用用户（uid）枚举，覆盖网关进程 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(1ffd8)</samp>](https://github.com/FNOSP/fnos-dsh/commit/1ffd803c)\n  - 三方插件代理自动识别前缀，并独立成菜单分组 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(09647)</samp>](https://github.com/FNOSP/fnos-dsh/commit/0964774e)\n  - 刷新/重启移回「更多」菜单；自动前缀自巡检避免 404 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(6fd85)</samp>](https://github.com/FNOSP/fnos-dsh/commit/6fd85272)\n  - 日志自动换行与整行同色；运行页字号统一 14px、轮询 5 秒 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(e78c0)</samp>](https://github.com/FNOSP/fnos-dsh/commit/e78c0491)\n  - 命令行省略改用 Semi Typography 并带 tooltip；gateway-proxy 受保护 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(72f02)</samp>](https://github.com/FNOSP/fnos-dsh/commit/72f0223d)\n  - 「插件管理」三个 tab 收纳安装修复与已装列表；修选中态不可见 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(0f7c3)</samp>](https://github.com/FNOSP/fnos-dsh/commit/0f7c3c4e)\n  - 插件管理四 tab、自定义插件索引、版本更新检测；dshmarket 移出内置 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(be530)</samp>](https://github.com/FNOSP/fnos-dsh/commit/be5304aa)\n  - 插件安装（pnpm + 按基线选版 + 实时日志），并完成四组界面调整 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(f3d7a)</samp>](https://github.com/FNOSP/fnos-dsh/commit/f3d7a723)\n  - 已安装插件改用卡片，支持启用/禁用、卸载与更新 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(b026"
+      "updated_at": "2026-11-19",
+      "changelog": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- **dsh**: 运行基线迁移到 DSH 0.2.2-rc.5（FNOS-057） &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(90c9e)</samp>](https://github.com/FNOSP/fnos-dsh/commit/90c9e202)\n- **tooling**: 加 pre-commit 守卫，拦截 pnpm install 写回的 catalog 污染 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(e2676)</samp>](https://github.com/FNOSP/fnos-dsh/commit/e2676ef5)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- **plugins**:\n  - 清除 package.json 上被 pnpm install 写回的解析结果 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(38f03)</samp>](https://github.com/FNOSP/fnos-dsh/commit/38f035d0)\n  - 补齐 peerDependencies 上被 pnpm install 写回的解析结果 &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(8e16e)</samp>](https://github.com/FNOSP/fnos-dsh/commit/8e16e378)\n- **tooling**:\n  - 索引重新生成到 8.3.0，version 用例补齐三处承载 fixture &nbsp;-&nbsp; by @dsh-agent-bot [<samp>(0cf19)</samp>](https://github.com/FNOSP/fnos-dsh/commit/0cf19fd4)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/FNOSP/fnos-dsh/compare/v8.2.7...v8.3.0)"
     }
   }
 }
